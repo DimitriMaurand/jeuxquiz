@@ -1,0 +1,11 @@
+body{
+    height: 100vh;
+    background-image: url(../medias/bonnie-kitahata-9aHj3ZAETNA-unsplash.jpg);
+    background-size: cover;
+}
+
+.delta{
+    cursor: pointer;
+    position: absolute;
+    z-index: auto;
+}

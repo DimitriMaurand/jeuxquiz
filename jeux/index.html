@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrainement examen de pilote ffvl</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/baf950d5f0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="arrierePlan">
+      <h1 class="titre">Entrainement examen de pilote ffvl</h1>
+      <div class="barre ">
+        <div class="vie fond">
+          <i class="fa-solid fa-heart fa-3x coeur"></i>
+          <p class="pBarre resteVie"></p>
+        </div>
+        
+        <div class="contentScore fond">
+          <i class="fa-solid fa-star fa-3x iscore"></i>
+          <p class="pBarre score"></p>
+        </div>
+        
+        <div class="temps fond">
+          <i class="fa-regular fa-clock fa-3x "></i>
+          <p id="decompte" class="pBarre">0</p>
+        </div>
+
+        <div class="nQuestion fond">
+          <p class="pBarre">Question<span class="numeroQuestion"></span>/<span class="totalQuestion"></span></p>
+          
+        </div>
+        
+        <div class="message fond"><p class="messageRep pBarre"></p></div>
+
+        <div class="regle" onclick=togglePopup(event)>
+          <p class="pBarre" >Règle</p>
+        </div>
+      </div>
+      <div class="contentQuestion">
+        
+      </div>
+
+      <div class="contentReponse">
+      </div >
+       
+      <div class="bas">
+        <div class="start rep" id="start" >Démarrer</div>
+      </div>
+      <div class="bas2">
+        <div class="suivant start2 rep" id="start" >Suivant</div>
+      </div>
+      <div id="popupOverlay" class="open" onclick=togglePopup(event) >
+      <div class="popupcontent" >
+        <h2 class="h2pop">Règle</h2>
+        <p class="ppop">
+         Vous avez trois vies pour répondre à une série de questions.
+        </p>
+         <p class="ppop">
+         60 seconde par question.
+        </p>
+         
+        <p class="ppop numeroReponse totalReponse">
+         Egalement essayer egalement le <a href="./jeux2.html" target="_blank">simulateur</a> de vol en cliquant dessus
+        </p>
+
+      </div>
+  </body>
+  <script src="./scripts/popup.js"></script>
+  <script src="./scripts/quiz.js"></script>
+  <script src="./scripts/script.js" type="module" ></script>
+</html>

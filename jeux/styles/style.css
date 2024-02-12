@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.arrierePlan {
+  height: 100vh;
+  background-image: url(../medias/bonnie-kitahata-9aHj3ZAETNA-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titre {
+  margin: 1%;
+  font-size: 5rem;
+}
+
+/*élément haut*/
+.barre {
+  height: 10%;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fond{
+  background-color:lightgray;
+  opacity: 0.5;
+  border-radius: 15px;
+}
+
+.vie {
+  height: 90%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coeur{
+  color: red;
+}
+
+.pBarre{
+font-size: 3rem;
+text-align: center;
+padding: 1rem;
+margin: 0;
+}
+
+.NQuestion{
+  height: 90%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contentScore {
+  height: 90%;
+  width: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.iscore{
+  color: yellow;
+}
+
+.temps {
+  height: 90%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+
+.messageRep{
+  font-size: 3rem;
+  text-align: center;
+padding: auto;
+display: none;
+}
+
+
+
+.regle {
+  height: 90%;
+  width: 10%;
+  background-color:lightgray;
+  opacity: 0.5;
+  border-radius: 15px;
+}
+
+.regle :hover{
+  cursor: pointer;
+  background-color:gray;
+  border-radius: 15px;
+}
+/*question*/
+
+.contentQuestion {
+  margin-top: 20px;
+  height: 30%;
+  width: 90%;
+  background-color:lightgray;
+  opacity: 0.5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  
+}
+
+.question{
+  font-size: 3.5rem;
+  text-align: center;
+  padding: auto;
+}
+
+/*réponse*/
+
+.contentReponse {
+  height: 35%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  display: none;
+}
+
+.rep {
+  padding: auto;
+  height: 35%;
+  width: 47%;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.rep1 {
+  background-color:lightcyan;
+  opacity: 0.5;
+  border-radius: 15px;
+  transition: background-color 0.5s;
+}
+
+.rep1:hover{
+  background-color: #3a6a86;
+  opacity: 0.5;
+}
+
+.bas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 7%;
+  
+}
+
+.bas2{
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 7%;
+  
+}
+
+
+.messageRep{
+  font-size: 3rem;
+  text-align: center;
+padding: auto;
+
+}
+
+.start {
+  background-color: rgb(141, 201, 250);
+  margin: 5%;
+ height: 100%;
+ width: 20%;
+  border: 5px solid lightcyan;
+  border-radius: 20px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.start2 {
+  background-color: rgb(141, 201, 250);
+  margin: 5%;
+ height: 100%;
+ width: 20%;
+  border: 5px solid lightcyan;
+  border-radius: 20px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.start:hover{
+  background-color: rgb(0, 89, 255);
+  cursor: pointer;
+}
+
+
+
+
+/*popup*/
+
+
+  /*fenetre popup*/
+  #popupOverlay {
+    position: fixed;
+    padding: 16%;
+    z-index: 80;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popupcontent {
+    background-image: url(../medias/bonnie-kitahata-9aHj3ZAETNA-unsplash.jpg);
+   
+    background-size: cover;
+    width: 90%;
+    height: fit-content;
+    padding: 30px;
+    border: 8px solid lightblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transform: translate(0%, 25%);
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .popupExit {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border: 5px;
+  }
+
+
+#popupOverlay.open {
+  display: none !important;
+}
+
+.h2pop{
+  font-size: 5rem;
+  text-align: center;
+}
+
+.ppop{
+  font-size: 2rem;
+}
