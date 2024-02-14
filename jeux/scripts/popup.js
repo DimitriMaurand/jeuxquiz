@@ -8,3 +8,4 @@ function togglePopup(event) {
 
     popup.classList.toggle("open");
 }
+

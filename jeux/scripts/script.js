@@ -9,11 +9,12 @@ comptageQ.comptage(nbQuestion)
 
 let suivant = document.querySelector(".suivant")
 let button = document.querySelector(".start")
-let boutonReponse = document.querySelectorAll(".rep"); //écoute bouton rep1
-console.log(boutonReponse)
+let boutonReponse = document.querySelectorAll(".boutonRep"); // .contentReponseécoute bouton rep1 si classe content reponse écoute toute les question les deux non
+
 //*********************************************************** */
 //apparition des blocs question et réponse
 //*********************************************************** */
+
 
 function apparition() {
     let contentQuestion = document.querySelector(".contentQuestion");
@@ -32,14 +33,25 @@ apparition();
 //Jouer apparietion question plus comptage
 //*********************************************************** */
 
-boutonReponse.addEventListener("click", () => {
+
+
+suivant.addEventListener("click", () => {
     let contentReponse = document.querySelector(".contentReponse");
     contentReponse.innerHTML = "";   // je vide mon écriture présédente
     nbQuestion++;
     comptageQ.comptage(nbQuestion);
-
-
 })
+// boutonReponse.forEach((butrep) => {
+//     butrep.addEventListener("click", () => {
+//         let contentReponse = document.querySelector(".contentReponse");
+//         contentReponse.innerHTML = "";   // je vide mon écriture présédente
+//         nbQuestion++;
+//         comptageQ.comptage(nbQuestion);
+
+//     })
+
+// })
+
 
 
 
@@ -93,53 +105,61 @@ startBouton.addEventListener("click", start)
 function message(juste) {
     let messageRep = document.querySelector(".messageRep")
     messageRep.textContent = juste ? "Bonne réponse" : "Mauvaise réponse"  //creation de boelen
-    messageRep.style.color = juste ? "grenn" : "red"
+    messageRep.style.color = juste ? "green" : "red"
     messageRep.style.display = "block"
+
+    setTimeout(() => {
+        messageRep.style.display = "none";
+    }, 3000);  // 3000 ms = 3 secondes
 }
 
 
 //*********************************************************** */
 //VerificationReponse
 //*********************************************************** */
-
+// console.log(quiz[reponse])
 
 function VerificationReponse(bonneRponse) {
 
-    let repJoueur = quiz[i].reponse;
-    // console.log(quiz[i].reponse)
-    // solution()
-    if (bonneRponse == repJoueur.juste) {
+    bonneRponse++
+
+
+    if (bonneRponse == quiz[nbQuestion].solution) {
+        console.log(bonneRponse)
         message(true)
         //utilisation de boelen
         scoreActualise = +6    // rajoute plus +6 
-        intScore                // met a jour
+        intScore()        // met a jour
 
 
     } else {
         message(false)   //message faux
 
-        vieRestante = --      // enleve une vie
-            actionVie()      // met a jour la vie
+        vieRestante = vieRestante - 1     // enleve une vie
+        actionVie()      // met a jour la vie
     }
-    return
+
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     boutonReponse.forEach((bouton, index) => {
+    //         VerificationReponse(index);
+    //         console.log(index);
+    //     });
+    // });
+
 }
 
-// function solution(numeroQuestion) {
-//     let quiz = quiz
-//     let reponse = quiz.reponse
-//     let solution = quiz[0]
-//     console.log(reponse)
-//     if (reponse === solution) {
 
-//     }
-// }
 
 
 boutonReponse.forEach((bouton, index) => {//execution fonction et écoute
     bouton.addEventListener("click", () => {
         VerificationReponse(index);
+        console.log(index);
+
     });
 });
+
+
 
 
 

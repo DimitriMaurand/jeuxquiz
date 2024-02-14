@@ -6,7 +6,7 @@ const quiz = [
             "Quecbec Uniform India Zoulou",
             "Quecbec Ulysse Italy Zoulou",
         ],
-        solution: [3]
+        solution: 3
     },
     {
         question: "Si vous volez par vent arrière fort:",
@@ -15,25 +15,25 @@ const quiz = [
             "vous avez moins de portance sur votre parapente",
             "cela fragilise votre parapente qui peut se fermer plus facilement"
         ],
-        solution: [2]
+        solution: 2
     },
     {
         question: "En haute montagne, la densité de l'air diminuant avec l'altitude et pour que votre aile puisse décoller, vous devez vous attendre à courir :",
         reponse: ["défile 2 fois moins vite que par vent nul",
             "plus vite",
-            "plus longtemps",
+            "plus longtemps et plus vite",
             "moins longtemps",
         ],
-        solution: [2, 3]
+        solution: 3
     },
     {
         question: "Vous êtes le premier à enrouler une ascendance :",
         reponse: ["les ailes qui arrivent après vous doivent adopter votre sens de rotation",
             "aucune autre aile n'a le droit d'utiliser cette ascendance",
-            "une aile qui entre dans l'ascendance au même niveau que vous doit spiraler à 180° et dans le même sens",
+            "une aile qui entre dans l'ascendance au même niveau que vous doit spiraler à 90° et dans le même sens",
             "vous êtes prioritaire sur une aile située en dessous et qui vous rejoint",
         ],
-        solution: [1, 3]
+        solution: 1
     },
     {
         question: "Une aile arrive en face de vous, vous effectuez :",
@@ -42,7 +42,7 @@ const quiz = [
             "un virage à droite(l'autre dégage aussi à droite)",
             "une mise en montée(l’autre reste au même niveau)",
         ],
-        solution: [3]
+        solution: 3
     },
     //rajouter d'autre question
 ]
